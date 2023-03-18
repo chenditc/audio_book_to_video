@@ -11,7 +11,8 @@ The result mp4 will looks like:
   - [Get a translator key](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-translator?tabs=csharp)
 2. Run docker:
 ```
-
+docker build -t audio_book .
+docker run -e SPEECH_KEY=xxx -e SPEECH_REGION=xxx -e TRANSLATOR_KEY=xxx -e TRANSLATOR_REGION  -d -v $(pwd):/data audio_book ./run.sh
 ```
 
 ## How does the project works?
